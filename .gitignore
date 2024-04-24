@@ -71,9 +71,10 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 
 # Large files
-*.psd
-*.png
+# *.psd
+# *.png
 
 # Asset Packs
 /[Aa]ssets/TreePackVol.1
 /[Aa]ssets/TerrainSampleAssets
+/[Aa]ssets/StarSparrow
