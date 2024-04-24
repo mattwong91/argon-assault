@@ -73,3 +73,7 @@ crashlytics-build.properties
 # Large files
 *.psd
 *.png
+
+# Asset Packs
+/[Aa]ssets/TreePackVol.1
+/[Aa]ssets/TerrainSampleAssets
