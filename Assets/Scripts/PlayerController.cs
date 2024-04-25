@@ -5,11 +5,6 @@ public class PlayerController : MonoBehaviour
 {
   [SerializeField] InputAction movement;
 
-  void Start()
-  {
-
-  }
-
   // Lifecycle hooks to enable and disable InputAction system for movement
   private void OnEnable()
   {

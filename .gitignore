@@ -75,6 +75,4 @@ crashlytics-build.properties
 # *.png
 
 # Asset Packs
-/[Aa]ssets/TreePackVol.1
-/[Aa]ssets/TerrainSampleAssets
-/[Aa]ssets/StarSparrow
+/[Aa]ssets/AssetPacks
