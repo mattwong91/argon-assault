@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
 
   void Update()
   {
-    float horizontalThrow = movement.ReadValue<Vector2>().x;
-    float verticalThrow = movement.ReadValue<Vector2>().y;
+    float xThrow = movement.ReadValue<Vector2>().x;
+    float yThrow = movement.ReadValue<Vector2>().y;
   }
 }
