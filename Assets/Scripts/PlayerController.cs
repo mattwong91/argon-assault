@@ -1,9 +1,10 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
+// NOTE Using new input system
+// using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-  [SerializeField] InputAction movement;
+  // [SerializeField] InputAction movement;
   [SerializeField] float controlSpeed = 25f;
   [SerializeField] float xRange = 8f;
   [SerializeField] float yRange = 6f;
@@ -15,16 +16,18 @@ public class PlayerController : MonoBehaviour
 
   float xThrow, yThrow;
 
+  // NOTE Using new input system
   // Lifecycle hooks to enable and disable InputAction system for movement
-  private void OnEnable()
-  {
-    movement.Enable();
-  }
 
-  private void OnDisable()
-  {
-    movement.Disable();
-  }
+  // private void OnEnable()
+  // {
+  //   movement.Enable();
+  // }
+
+  // private void OnDisable()
+  // {
+  //   movement.Disable();
+  // }
 
   void Update()
   {
@@ -47,8 +50,12 @@ public class PlayerController : MonoBehaviour
 
   void ProcessTranslation()
   {
-    xThrow = movement.ReadValue<Vector2>().x;
-    yThrow = movement.ReadValue<Vector2>().y;
+    // NOTE Using new input system
+    // xThrow = movement.ReadValue<Vector2>().x;
+    // yThrow = movement.ReadValue<Vector2>().y;
+
+    xThrow = Input.GetAxis("Horizontal");
+    yThrow = Input.GetAxis("Vertical");
 
     float xOffset = xThrow * controlSpeed * Time.deltaTime;
     float rawXPos = transform.localPosition.x + xOffset;
