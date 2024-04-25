@@ -1,18 +1,29 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+  [SerializeField] InputAction movement;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+  void Start()
+  {
+
+  }
+
+  // Lifecycle hooks to enable and disable InputAction system for movement
+  private void OnEnable()
+  {
+    movement.Enable();
+  }
+
+  private void OnDisable()
+  {
+    movement.Disable();
+  }
+
+  void Update()
+  {
+    float horizontalThrow = movement.ReadValue<Vector2>().x;
+    float verticalThrow = movement.ReadValue<Vector2>().y;
+  }
 }
