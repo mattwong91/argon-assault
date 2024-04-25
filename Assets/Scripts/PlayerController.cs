@@ -21,6 +21,18 @@ public class PlayerController : MonoBehaviour
 
   void Update()
   {
+    ProcessTranslation();
+    ProcessRotation();
+
+  }
+
+  void ProcessRotation()
+  {
+    transform.localRotation = Quaternion.Euler(-30f, 30f, 0f);
+  }
+
+  void ProcessTranslation()
+  {
     float xThrow = movement.ReadValue<Vector2>().x;
     float yThrow = movement.ReadValue<Vector2>().y;
 
@@ -34,6 +46,5 @@ public class PlayerController : MonoBehaviour
     float clampedYPos = Mathf.Clamp(rawYPos, -yRange, yRange);
 
     transform.localPosition = new Vector3(clampedXPos, clampedYPos, transform.localPosition.z);
-
   }
 }
