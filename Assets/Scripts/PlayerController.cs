@@ -50,7 +50,6 @@ public class PlayerController : MonoBehaviour
     xThrow = movement.ReadValue<Vector2>().x;
     yThrow = movement.ReadValue<Vector2>().y;
 
-    // NOTE Instructor movement code
     float xOffset = xThrow * controlSpeed * Time.deltaTime;
     float rawXPos = transform.localPosition.x + xOffset;
     float clampedXPos = Mathf.Clamp(rawXPos, -xRange, xRange);
