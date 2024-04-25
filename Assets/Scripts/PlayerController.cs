@@ -5,6 +5,8 @@ public class PlayerController : MonoBehaviour
 {
   [SerializeField] InputAction movement;
   [SerializeField] float controlSpeed = 25f;
+  [SerializeField] float xRange = 8f;
+  [SerializeField] float yRange = 6f;
 
   // Lifecycle hooks to enable and disable InputAction system for movement
   private void OnEnable()
@@ -22,18 +24,16 @@ public class PlayerController : MonoBehaviour
     float xThrow = movement.ReadValue<Vector2>().x;
     float yThrow = movement.ReadValue<Vector2>().y;
 
-    float xOffset = xThrow * controlSpeed * Time.deltaTime;
-    float yOffset = yThrow * controlSpeed * Time.deltaTime;
-
     // NOTE Instructor movement code
-    // float newXPos = transform.localPosition.x + xOffset;
-    // float newYPos = transform.localPosition.y + xOffset;
-    // transform.localPosition = new Vector3(newXPos, newYPos, transform.localPosition.z);
+    float xOffset = xThrow * controlSpeed * Time.deltaTime;
+    float rawXPos = transform.localPosition.x + xOffset;
+    float clampedXPos = Mathf.Clamp(rawXPos, -xRange, xRange);
 
-    // NOTE My thoughts on how to do this movement, adding vector3 objects together
-    Vector3 currentPosition = new Vector3(transform.localPosition.x, transform.localPosition.y, transform.localPosition.z);
-    Vector3 offsetPosition = new Vector3(xOffset, yOffset, 0);
+    float yOffset = yThrow * controlSpeed * Time.deltaTime;
+    float rawYPos = transform.localPosition.y + yOffset;
+    float clampedYPos = Mathf.Clamp(rawYPos, -yRange, yRange);
 
-    transform.localPosition = currentPosition + offsetPosition;
+    transform.localPosition = new Vector3(clampedXPos, clampedYPos, transform.localPosition.z);
+
   }
 }
