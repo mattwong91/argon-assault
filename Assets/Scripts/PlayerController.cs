@@ -1,3 +1,4 @@
+using System;
 using Unity.IO.LowLevel.Unsafe;
 using UnityEngine;
 // NOTE Using new input system
@@ -10,6 +11,7 @@ public class PlayerController : MonoBehaviour
   [SerializeField] float controlSpeed = 25f;
   [SerializeField] float xRange = 8f;
   [SerializeField] float yRange = 6f;
+  [SerializeField] GameObject[] lasers;
 
   [SerializeField] float positionPitchFactor = -2f;
   [SerializeField] float controlPitchFactor = -10f;
@@ -78,7 +80,27 @@ public class PlayerController : MonoBehaviour
     // if(fire.ReadValue<float>() > 0.5)
     if (Input.GetButton("Fire1"))
     {
-      Debug.Log("Shooting");
+      ActivateLasers();
+    }
+    else
+    {
+      DeactivateLasers();
+    }
+  }
+
+  void DeactivateLasers()
+  {
+    foreach (GameObject laser in lasers)
+    {
+      laser.SetActive(false);
+    }
+  }
+
+  void ActivateLasers()
+  {
+    foreach (GameObject laser in lasers)
+    {
+      laser.SetActive(true);
     }
   }
 }
