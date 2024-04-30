@@ -6,14 +6,28 @@ public class PlayerController : MonoBehaviour
 {
   // [SerializeField] InputAction movement;
   // [SerializeField] InputAction movement;
+  [Header("General Setup Settings")]
+  [Tooltip("How fast ship moves up and down due to player input")]
   [SerializeField] float controlSpeed = 25f;
+  [Tooltip("Max distance ship can travel left and right")]
   [SerializeField] float xRange = 8f;
+  [Tooltip("Max distance ship can travel up and down")]
   [SerializeField] float yRange = 6f;
+
+  [Header("Laser gun array")]
+  [Tooltip("Add all player lasers here")]
   [SerializeField] GameObject[] lasers;
 
+  [Header("Position based rotation tuning")]
+  [Tooltip("Pitch rotation due to position on screen")]
   [SerializeField] float positionPitchFactor = -2f;
-  [SerializeField] float controlPitchFactor = -10f;
+  [Tooltip("Yaw rotation due to position on screen")]
   [SerializeField] float positionYawFactor = 3f;
+
+  [Header("Player input based rotation tuning")]
+  [Tooltip("Pitch rotation due to player input")]
+  [SerializeField] float controlPitchFactor = -10f;
+  [Tooltip("Roll rotation due to player input")]
   [SerializeField] float controlRollFactor = -15f;
 
   float xThrow, yThrow;
@@ -78,27 +92,21 @@ public class PlayerController : MonoBehaviour
     // if(fire.ReadValue<float>() > 0.5)
     if (Input.GetButton("Fire1"))
     {
-      ActivateLasers();
+      SetLasersActive(true);
     }
     else
     {
-      DeactivateLasers();
+      SetLasersActive(false);
     }
   }
 
-  void DeactivateLasers()
+  void SetLasersActive(bool isActive)
   {
     foreach (GameObject laser in lasers)
     {
-      laser.SetActive(false);
+      var emissionModule = laser.GetComponent<ParticleSystem>().emission;
+      emissionModule.enabled = isActive;
     }
   }
 
-  void ActivateLasers()
-  {
-    foreach (GameObject laser in lasers)
-    {
-      laser.SetActive(true);
-    }
-  }
 }
