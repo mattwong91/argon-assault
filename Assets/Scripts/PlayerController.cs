@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
   // [SerializeField] InputAction movement;
-  // [SerializeField] InputAction movement;
+  // [SerializeField] InputAction fire;
   [Header("General Setup Settings")]
   [Tooltip("How fast ship moves up and down due to player input")]
   [SerializeField] float controlSpeed = 25f;
