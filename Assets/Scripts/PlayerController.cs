@@ -1,5 +1,3 @@
-using System;
-using Unity.IO.LowLevel.Unsafe;
 using UnityEngine;
 // NOTE Using new input system
 // using UnityEngine.InputSystem;
