@@ -1,9 +1,11 @@
+using Unity.IO.LowLevel.Unsafe;
 using UnityEngine;
 // NOTE Using new input system
 // using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
+  // [SerializeField] InputAction movement;
   // [SerializeField] InputAction movement;
   [SerializeField] float controlSpeed = 25f;
   [SerializeField] float xRange = 8f;
@@ -22,18 +24,20 @@ public class PlayerController : MonoBehaviour
   // private void OnEnable()
   // {
   //   movement.Enable();
+  //   fire.Enable();
   // }
 
   // private void OnDisable()
   // {
   //   movement.Disable();
+  //   fire.Disable();
   // }
 
   void Update()
   {
     ProcessTranslation();
     ProcessRotation();
-
+    ProcessFiring();
   }
 
   void ProcessRotation()
@@ -66,5 +70,15 @@ public class PlayerController : MonoBehaviour
     float clampedYPos = Mathf.Clamp(rawYPos, -yRange, yRange);
 
     transform.localPosition = new Vector3(clampedXPos, clampedYPos, transform.localPosition.z);
+  }
+
+  void ProcessFiring()
+  {
+    // NOTE Using new input system
+    // if(fire.ReadValue<float>() > 0.5)
+    if (Input.GetButton("Fire1"))
+    {
+      Debug.Log("Shooting");
+    }
   }
 }
