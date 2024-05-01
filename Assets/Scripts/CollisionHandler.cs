@@ -1,13 +1,25 @@
+using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CollisionHandler : MonoBehaviour
 {
-  void OnCollisionEnter(Collision other)
-  {
-    Debug.Log(this.name + "--Collided with--" + other.gameObject.name);
-  }
+  [SerializeField] float loadDelay = 1f;
+
   void OnTriggerEnter(Collider other)
   {
-    Debug.Log($"{this.name} **Triggered by** {other.gameObject.name}");
+    StartCrashSequence();
+  }
+
+  void StartCrashSequence()
+  {
+    GetComponent<PlayerController>().enabled = false;
+    Invoke("ReloadLevel", loadDelay);
+  }
+
+  void ReloadLevel()
+  {
+    int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+    SceneManager.LoadScene(currentSceneIndex);
   }
 }
