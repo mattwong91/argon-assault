@@ -16,11 +16,22 @@ public class Enemy : MonoBehaviour
 
   void OnParticleCollision(GameObject other)
   {
-    scoreBoard.IncreaseScore(scoreValue);
+    ProcessHit();
+    KillEnemy();
+  }
 
+  void ProcessHit()
+  {
+    scoreBoard.IncreaseScore(scoreValue);
+  }
+
+  void KillEnemy()
+  {
     GameObject vfx = Instantiate(deathVFX, transform.position, Quaternion.identity);
     vfx.transform.parent = parent;
 
     Destroy(gameObject);
   }
+
+
 }
