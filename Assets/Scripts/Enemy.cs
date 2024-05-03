@@ -6,14 +6,21 @@ public class Enemy : MonoBehaviour
   [SerializeField] GameObject hitVFX;
   [SerializeField] Transform parent;
 
-  [SerializeField] int scoreValue;
-  [SerializeField] int hitPoints = 2;
+  [SerializeField] int scoreValue = 2;
+  [SerializeField] int hitPoints = 3;
 
   ScoreBoard scoreBoard;
 
   void Start()
   {
     scoreBoard = FindObjectOfType<ScoreBoard>();
+    AddRigidBody();
+  }
+
+  void AddRigidBody()
+  {
+    Rigidbody rb = gameObject.AddComponent<Rigidbody>();
+    rb.useGravity = false;
   }
 
   void OnParticleCollision(GameObject other)
