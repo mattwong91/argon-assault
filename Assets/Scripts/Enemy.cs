@@ -4,16 +4,17 @@ public class Enemy : MonoBehaviour
 {
   [SerializeField] GameObject deathVFX;
   [SerializeField] GameObject hitVFX;
-  [SerializeField] Transform parent;
 
   [SerializeField] int scoreValue = 2;
   [SerializeField] int hitPoints = 3;
 
   ScoreBoard scoreBoard;
+  GameObject parentGameObject;
 
   void Start()
   {
     scoreBoard = FindObjectOfType<ScoreBoard>();
+    parentGameObject = GameObject.FindWithTag("SpawnAtRuntime");
     AddRigidBody();
   }
 
@@ -51,7 +52,7 @@ public class Enemy : MonoBehaviour
   void PlayVFX(GameObject vfxToPlay)
   {
     GameObject vfx = Instantiate(vfxToPlay, transform.position, Quaternion.identity);
-    vfx.transform.parent = parent;
+    vfx.transform.parent = parentGameObject.transform;
   }
 
 }
