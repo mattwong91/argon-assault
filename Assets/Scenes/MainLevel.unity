@@ -297,11 +297,16 @@ PlayableDirector:
     value: {fileID: 0}
   - key: {fileID: 5795234012671780510, guid: 92d972d033abb4b5ca800cf0e9e86a6a, type: 2}
     value: {fileID: 923153698}
+  - key: {fileID: 8172988600500040124, guid: 92d972d033abb4b5ca800cf0e9e86a6a, type: 2}
+    value: {fileID: 0}
   m_ExposedReferences:
     m_References:
+    - 60beace559ca4452bb05880350d5a268: {fileID: 1394398505}
     - 063106da317da4a3e84661d2c4d6eb1e: {fileID: 1772423242}
     - a1da3f01ed9e741cc856e504bbbc8a89: {fileID: 1740348461}
     - 233c2a10b31be4fbc9378ad14b6cdd68: {fileID: 611629132}
+    - f70798c957ced454c8e9c9e6f11cd95e: {fileID: 1394398505}
+    - 724f5550d483440609c191d800c16836: {fileID: 1394398505}
 --- !u!4 &692528102
 Transform:
   m_ObjectHideFlags: 0
@@ -500,6 +505,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 21.508, z: 0}
+--- !u!1 &1394398505 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9090833439944839925, guid: 3c2d214a88cc94d1ba6b8b4f240dcf75, type: 3}
+  m_PrefabInstance: {fileID: 4485256341206187746}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1740348461 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1202330362832923133, guid: 66ebf9cef4666487b9ab24695c7a8db6, type: 3}
