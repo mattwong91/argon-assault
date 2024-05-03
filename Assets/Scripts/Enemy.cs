@@ -35,7 +35,6 @@ public class Enemy : MonoBehaviour
 
   void ProcessHit()
   {
-    scoreBoard.IncreaseScore(scoreValue);
     hitPoints--;
     if (hitPoints >= 1)
     {
@@ -45,6 +44,7 @@ public class Enemy : MonoBehaviour
 
   void KillEnemy()
   {
+    scoreBoard.IncreaseScore(scoreValue);
     PlayVFX(deathVFX);
     Destroy(gameObject);
   }
