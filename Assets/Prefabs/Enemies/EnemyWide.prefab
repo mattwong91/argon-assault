@@ -226,6 +226,7 @@ GameObject:
   - component: {fileID: 4504416200224377682}
   - component: {fileID: 399120081508380900}
   - component: {fileID: 438780359796591870}
+  - component: {fileID: 4753538967929275664}
   m_Layer: 0
   m_Name: EnemyWide
   m_TagString: Untagged
@@ -313,9 +314,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathVFX: {fileID: 4375699948651063440, guid: baf026eefbcab4be089a3c4065516431, type: 3}
   hitVFX: {fileID: 6553758666267483305, guid: 852c2dd06cda04e1f8aebcd5f5969f69, type: 3}
-  parent: {fileID: 0}
   scoreValue: 100
   hitPoints: 20
+--- !u!65 &4753538967929275664
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3090468995131280178}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 12.008005, y: 5.232236, z: 13.0688305}
+  m_Center: {x: 0, y: -0.000000834465, z: 0.000015497208}
 --- !u!1 &3324929061391935718
 GameObject:
   m_ObjectHideFlags: 0

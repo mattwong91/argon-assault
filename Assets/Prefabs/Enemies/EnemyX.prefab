@@ -1194,6 +1194,7 @@ GameObject:
   - component: {fileID: 7155920295343471792}
   - component: {fileID: 3112548739511243617}
   - component: {fileID: 6909783754111380958}
+  - component: {fileID: 7695523848266784819}
   m_Layer: 0
   m_Name: EnemyX
   m_TagString: Untagged
@@ -1281,9 +1282,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathVFX: {fileID: 4375699948651063440, guid: baf026eefbcab4be089a3c4065516431, type: 3}
   hitVFX: {fileID: 6553758666267483305, guid: 852c2dd06cda04e1f8aebcd5f5969f69, type: 3}
-  parent: {fileID: 0}
   scoreValue: 50
   hitPoints: 10
+--- !u!65 &7695523848266784819
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8225703032281989659}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 9.651424, y: 1.7536122, z: 12.358537}
+  m_Center: {x: 0, y: -0.0000010728835, z: 0.000006198883}
 --- !u!1 &8324666972269010485
 GameObject:
   m_ObjectHideFlags: 0

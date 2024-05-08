@@ -1620,6 +1620,7 @@ GameObject:
   - component: {fileID: 641045722639604177}
   - component: {fileID: 6170630357387715451}
   - component: {fileID: 8793351901469494715}
+  - component: {fileID: 6439715207511142294}
   m_Layer: 0
   m_Name: EnemyInverted
   m_TagString: Untagged
@@ -1707,9 +1708,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathVFX: {fileID: 4375699948651063440, guid: baf026eefbcab4be089a3c4065516431, type: 3}
   hitVFX: {fileID: 6553758666267483305, guid: 852c2dd06cda04e1f8aebcd5f5969f69, type: 3}
-  parent: {fileID: 0}
   scoreValue: 60
   hitPoints: 2
+--- !u!65 &6439715207511142294
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8514098606327945210}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 11.085112, y: 2.8066294, z: 10.785945}
+  m_Center: {x: 0, y: -0.00000071525574, z: -0.0000069141383}
 --- !u!1 &8882553976797899385
 GameObject:
   m_ObjectHideFlags: 0

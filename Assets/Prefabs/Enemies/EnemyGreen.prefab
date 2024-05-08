@@ -814,6 +814,7 @@ GameObject:
   - component: {fileID: 8390251891926602860}
   - component: {fileID: 5307531235445605054}
   - component: {fileID: 5906513319838912219}
+  - component: {fileID: 1699135682744524687}
   m_Layer: 0
   m_Name: EnemyGreen
   m_TagString: Untagged
@@ -901,9 +902,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathVFX: {fileID: 4375699948651063440, guid: baf026eefbcab4be089a3c4065516431, type: 3}
   hitVFX: {fileID: 6553758666267483305, guid: 852c2dd06cda04e1f8aebcd5f5969f69, type: 3}
-  parent: {fileID: 0}
   scoreValue: 80
   hitPoints: 12
+--- !u!65 &1699135682744524687
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6225652124533516382}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 8.070742, y: 5.8879204, z: 15.896421}
+  m_Center: {x: 0, y: -0.0000010728836, z: -0.000009775162}
 --- !u!1 &6356068496270722566
 GameObject:
   m_ObjectHideFlags: 0
