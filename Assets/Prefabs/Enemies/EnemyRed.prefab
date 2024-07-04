@@ -101,7 +101,7 @@ MonoBehaviour:
   deathFX: {fileID: 4375699948651063440, guid: baf026eefbcab4be089a3c4065516431, type: 3}
   hitVFX: {fileID: 6553758666267483305, guid: 852c2dd06cda04e1f8aebcd5f5969f69, type: 3}
   scoreValue: 25
-  hitPoints: 5
+  hitPoints: 2
 --- !u!65 &1764289051952051176
 BoxCollider:
   m_ObjectHideFlags: 0
